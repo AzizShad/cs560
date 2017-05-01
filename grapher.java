@@ -41,39 +41,39 @@ public class grapher {
             if((i>=225)){
                 is3 = is4 = is5 = false;
             }
-            System.out.print((i+1) + " Will connect to ");
+            //System.out.print((i+1) + " Will connect to ");
             if(is1){
                 gr.addEdge((i+1)-15, i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)-15,i+1),storage[i]);
-                System.out.print("1 ");
+                //System.out.print("1 ");
             }
             if(is2){
                 gr.addEdge((i+1)-7,i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)-7,i+1),storage[i]);
-                System.out.print("2 ");
+                //System.out.print("2 ");
             }
             if(is3){
                 gr.addEdge((i+1)+8,i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)+8,i+1),storage[i]);
-                System.out.print("3 ");
+                //System.out.print("3 ");
             }
             if(is4){
                 gr.addEdge((i+1)+15,i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)+15,i+1),storage[i]);
-                System.out.print("4 ");
+                //System.out.print("4 ");
             }
             if(is5){
                 gr.addEdge((i+1)+7,i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)+7,i+1),storage[i]);
-                System.out.print("5 ");
+                //System.out.print("5 ");
             }
             if(is6){
                 gr.addEdge((i+1)-8,i+1);
                 gr.setEdgeWeight(gr.getEdge((i+1)-8,i+1),storage[i]);
-                System.out.print("6 ");
+                //System.out.print("6 ");
             }
-            System.out.print("--" + storage[i] + "---");
-            System.out.println();
+            //System.out.print("--" + storage[i] + "---");
+            //System.out.println();
         }
 
         return gr;
