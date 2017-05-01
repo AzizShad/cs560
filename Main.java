@@ -130,12 +130,32 @@ public class Main {
         }
         //Backtracking from end(8) to start(226) to get path
         int f = end;
+        int i = 0;
+        int path[] = new int[start];
         do{
-        	System.out.println("value: " + f + ", parent: " + parent[f]);
+        	path[i] = f;
+        	if (parent[f] == start){
+        		path[i++] = f;
+        		path[i++] = parent[f];
+        	}
         	f = parent[f];
+        	i++;
         }while(f != start);
         
-        
-        
+        //prints the path from start to end
+		for(int t = i-2; t>=0; t--) {
+		System.out.println(path[t]);
+		}
+		//adds the weights of vertices together to get cost path
+		double pathcost = 0;
+		for(int r=0; r <= i-2; r++){
+			if (gr.containsEdge(gr.getEdge(path[r]+7,path[r])))
+				pathcost += gr.getEdgeWeight(gr.getEdge(path[r]+7,path[r]));
+			 else 
+				pathcost += gr.getEdgeWeight(gr.getEdge(path[r]-7,path[r]));
+			
+		}
+
+        System.out.println("MINIMAL-COST PATH COSTS: " + pathcost);  
     }
 }
