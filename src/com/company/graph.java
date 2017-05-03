@@ -4,7 +4,7 @@ import org.jgrapht.WeightedGraph;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-import javax.swing.*;
+//import javax.swing.*;
 
 /**
  * Created by shadaziz on 4/22/17.
@@ -24,11 +24,18 @@ public class graph {
         return g.getEdge(v1, v2);
     }
 
+    //get value 
+    //e = getEdge(Integer v1, Integer v2)
+    //gets value of second parameter
     public double getEdgeWeight(DefaultWeightedEdge e) {
         return g.getEdgeWeight(e);
     }
 
     public void setEdgeWeight(DefaultWeightedEdge e, double v) {
         g.setEdgeWeight(e, v);
+    }
+    //added
+    public boolean containsEdge(DefaultWeightedEdge e){
+    	return g.containsEdge(e);
     }
 }
